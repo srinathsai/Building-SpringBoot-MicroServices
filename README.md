@@ -8,3 +8,19 @@ Microservices allow large applications to be split into smaller pieces that oper
 ### Differences between Microservice Architecture and Monolithic Architectures
 ![Image showing differences between MicroService and Monolithic Architecture](https://github.com/srinathsai/Building-SpringBoot-MicroServices/blob/main/differences%20between%20monolithic%20and%20micoservices.png)
 
+## Features of Microservices that were explored :
+  - Load Balancing between Using Spring service registry.
+  - Routing of APIs with Spring cloud's API gateway.
+  - Externalization of configuration with the help of Spring config server.
+  - Distributed tracing of an API request from starting to ending of it using Spring Micrometer.
+  - The 3 ways called RestTemplate, Spring cloud openFeign and webclient are analyzed for handling the APIs request between Microservices.
+  - Minimization of sending Post request of refresh by using Spring bus.
+  - Apache Kafka and RabbitMQ message brokers are tested for handling real live streaming data.
+
+## Requirements :
+  - Intellij Idea or any Java IDE.
+  - Postman Client.
+  - Docker Desktop, Docker Hub.
+  - JDK with a version of 17+ installed in pc.
+    
+
