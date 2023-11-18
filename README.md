@@ -21,6 +21,7 @@ Microservices allow large applications to be split into smaller pieces that oper
   - Intellij Idea or any Java IDE.
   - Postman Client.
   - Docker Desktop, Docker Hub.
-  - JDK with a version of 17+ installed in pc.
-    
+  - JDK with a version of 17 and 17+ installed in pc.
+
+## Implementation.
 
