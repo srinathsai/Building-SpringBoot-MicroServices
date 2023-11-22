@@ -22,6 +22,14 @@ Microservices allow large applications to be split into smaller pieces that oper
   - Postman Client.
   - Docker Desktop, Docker Hub.
   - JDK with a version of 17 and 17+ installed in pc.
+  - MySQL.
 
 ## Implementation :
-
+### Initial process - 
+  - At first required number of independent springboot projects which will be independent microservices are built with necessary dependencies from Spring initializer.  In my case Employee service, organization service and department service are 3 individual springBoot Microservices that were developed and explored all the features of Micorservices on these 3 core springboot projects.
+  - Create 3 seperate databases one for each in MySQL. (Because each independent Microservice can have it's own database).
+  - Configure all these applications.properties files to respective dbs that were created in above step.
+  - For each of 3 springboot projects develop necessary Rest APis . I have developed 2 api request methods for each one is for saving entity in database (Push request), next is get request. These 2 api request methods are built fro each springboot project using DTO and mappers.
+  - Remember all these 3 springboot server.ports in application.properties must be different because being different servers allows us to run them simultaneously.
+  - Check your logic of your api requesting methods using postMan for GET requests if you designed any or check for records in 3 databases for POST requests if you designed any.
+  - Once the logic of all your api request methods are correct, now we can explore all the features of the Microservices which are as below :
