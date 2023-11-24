@@ -9,7 +9,7 @@ Microservices allow large applications to be split into smaller pieces that oper
 ![Image showing differences between MicroService and Monolithic Architecture](https://github.com/srinathsai/Building-SpringBoot-MicroServices/blob/main/differences%20between%20monolithic%20and%20micoservices.png)
 
 ## Features of Microservices that were explored :
-  - Load Balancing between Using Spring service registry.
+  - Load Balancing between using Spring Service Registry.
   - Routing of APIs with Spring cloud's API gateway.
   - Externalization of configuration with the help of Spring config server.
   - Distributed tracing of an API request from starting to ending of it using Spring Micrometer.
@@ -33,3 +33,7 @@ Microservices allow large applications to be split into smaller pieces that oper
   - Remember all these 3 springboot server.ports in application.properties must be different because being different servers allows us to run them simultaneously.
   - Check your logic of your api requesting methods using postMan for GET requests if you designed any or check for records in 3 databases for POST requests if you designed any.
   - Once the logic of all your api request methods are correct, now we can explore all the features of the Microservices which are as below :
+
+### Implementation of Microservices features :-
+  #### a) Load Balancing using Spring Service Registry :
+    Initially a seperate Springboot project with spring-cloud-starter-netflix-eureka-server dependency is imported and made as parent module and remaining above modules as child modules in project structure of IntellijIdea. After this you need to add the same dependency to all the microservices and configure respective application properties with a common property that is "eureka.instance.client.serverUrl.defaultZone=http://localhost:8761/eureka/" (The spring service registry will be on default 8761 port ). After this is done run all the microservices simultaneously. And go to the url given in appliations.properties files in a web browser, after few seconds you will be able to see which Microservices are running on which ports with names that were mentioned in application.properties files. I have made department-service a jar copy with different server port and all the microservices that are running will be shown in this interface .
