@@ -47,5 +47,5 @@ Let's say there is a situation of retriving a record storing in another database
 Architecture used here :-
 ![Architecture of communication between microservices](https://github.com/srinathsai/Building-SpringBoot-MicroServices/blob/main/Communication%20between%20microservices.png).
 
-So in my application Employee Service microservice receives the base REST API. So therefore added 2 attributes called departmentcode (a department service microservice attribute which was written a logic to retrieve records based on this attribute in department service) and 
+So in my application Employee Service microservice receives the base REST API. So therefore added 2 attributes called departmentcode (a department service microservice attribute which was written a logic to retrieve records based on this attribute in department microservice) and organizationcode (a organization service microservice attribute which was written a logic to retrieve records based on this attribute in organization microservice). I also added APIresponseDTO class which has 3 instances of Employee object, department object and organization object which will combine all 
 
