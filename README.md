@@ -41,3 +41,6 @@ Microservices allow large applications to be split into smaller pieces that oper
    ![Interface of Service Registry](https://github.com/srinathsai/Building-SpringBoot-MicroServices/blob/main/Spring%20Service%20registry%20interface.png).
 
    ***The Main advantage of this feature is : if multiple microservices are running on different ports and if any of the microservice failed then working of application won't be disturbed  because it does load blanacing and finds the same working type microservice running on another port and directs any api call to it. If there is no same working microservice available we handle this case in circuit breaker using resilence4j. </br>***
+
+b) **Communication between Microservices** : </br>
+Let's say there is a situation of retriving a record storing in another database of another microservice from current microservice. So a api call between Microservices is required. This can be implemented by 3 ways which are using Webclient, RESTTemplate and Spring cloud Open Feigns. But before that we need to add the attribute of another microservice to the microservice entity class at which main api call matches the port and you need to write the logic for retriving the record of another microservice based on this attribute  that was added in the main microservice . After this you save few records by sending POST requests. 
