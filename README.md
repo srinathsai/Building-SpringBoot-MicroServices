@@ -65,4 +65,7 @@ Another Microservice called API gateway is created with a dependency Spring clou
   They are as follows :- </br>
     1) Manual routing </br>
     2) Automatic routing. </br>
+    I sticked to manual routing because if any new user saw my code manual routing can be helpful to understand better as it includes manual ports of respective microservice with urls.</br>
+    
+   Architecture used :- </br> 
 
