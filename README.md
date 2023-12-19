@@ -60,7 +60,7 @@ Imagine there are 100s of Microservices and there is a need to change in configu
 d) **Using of Spring Bus to reduce the frequency of sending actuator/refresh post request** </br>
 In the above case we can see that even though we skipped the process of restarting microservices there is still need of us to send actuator/refresh POST request every time we make a change. So to reduce this I have used a concept of Spring cloud called Spring Bus with external message broker called RabbitMq from docker and made all the microservices subscribe to this message broker. So only one time if we send the actuator/refresh POST request to the message broker it will broadcast the changes to all the microservices that are subscribed to it.  For this to happen we must include the RabbitMq's host, port and username in the application.properties files of Microservices.
 
-d) **Api gateway using Spring Cloud gateway** </br>
+e) **Api gateway using Spring Cloud gateway** </br>
 Another Microservice called API gateway is created with a dependency Spring cloud starter gateway. This dependency makes this microservice as api gateway implies all the apis first will be directed to it. This microservice internally acts as a load balancer and routes apis to specific microservice based on the requested api matching particularly microservice port. This routing of apis is done in application.properties files of API gateway and can be done in 2 ways. </br>
   They are as follows :- </br>
     1) Manual routing </br>
