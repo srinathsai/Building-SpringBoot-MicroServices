@@ -75,3 +75,6 @@ Of all the microservices there might be a possibility of connection breaking bet
 
 Architecture used :- </br>
 ![Circuit Breaker Architecture](https://github.com/srinathsai/Building-SpringBoot-MicroServices/blob/main/circuit%20breaker.png)
+
+g) **Distributed Tracing** </br>
+Distributed Tracing is a mechanism of Microserives that enables to analyze which microservice is taking more time to process an api request and which microservice is having an issue. This mechanism will give a unique span id for each microservice and will give a detailed flow chat of API request indicating which microservice is taking how much time. I implemented this feature using Spring Micrometer dependency. Usually Spring cloud provides zipkin or sleuth but these are limited for only Spring 3 version but above Spring 3 version you can use spring Micrometer.
