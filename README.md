@@ -69,3 +69,9 @@ Another Microservice called API gateway is created with a dependency Spring clou
     
    Architecture used :- </br> 
    ![API Gateway Architecture](https://github.com/srinathsai/Building-SpringBoot-MicroServices/blob/main/Api%20gateway.png)
+
+f) **Circuit Breaker** </br>
+Of all the microservices there might be a possibility of connection breaking between 2 microservices . So A api call which involves these 2 microservices will show a entire bad result even though other microservices are running perfectly. So to avoid this rollback error I have implemented a circuit breaker using resilence4J . So I have implemented between Employee microservice and organization microservice and purposely switched off Employee Microservice. So whenevr the api call that should go from Employee microservice to organization microservice usually gets a rollback error but I have implemented circuit breaker using Resilence4j which will give a message to the client .</br>
+
+Architecture used :- </br>
+![Circuit Breaker Architecture](https://github.com/srinathsai/Building-SpringBoot-MicroServices/blob/main/circuit%20breaker.png)
